@@ -1,6 +1,7 @@
 #!/bin/bash
-echo wait a few minutes.
-tar zxf mantaray-jop40c-factory-87340b80.tgz
+echo "Download and Deodexing... Please wait."
+wget -nc -q https://dl.google.com/dl/android/aosp/mantaray-jop40c-factory-0d641789.tgz
+tar zxf mantaray-jop40c-factory-0d641789.tgz
 cd mantaray-jop40c
 unzip image-mantaray-jop40c.zip
 cd ../
@@ -9,12 +10,15 @@ mkdir system
 mkdir tmp
 sudo mount -o loop -t ext4 system.ext4.img tmp
 sync
+mkdir -p system/lib
 mkdir -p system/vendor/etc
 mkdir -p system/vendor/firmware
 mkdir -p system/vendor/lib/drm
 mkdir -p system/vendor/secapp
 mkdir -p system/vendor/pittpatt
 mkdir -p system/media/video
+cp -a tmp/lib/liblightcycle.so system/lib/liblightcycle.so
+cp -a tmp/lib/libjni_mosaic.so system/lib/libjni_mosaic.so
 cp -a tmp/vendor/etc/audio_effects.conf system/vendor/etc/audio_effects.conf
 cp -a tmp/vendor/firmware/fimc_is_fw.bin system/vendor/firmware/fimc_is_fw.bin
 cp -a tmp/vendor/firmware/maxtouch.fw system/vendor/firmware/maxtouch.fw
