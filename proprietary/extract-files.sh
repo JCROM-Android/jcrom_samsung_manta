@@ -46,10 +46,10 @@ cp -a tmp/media/LMprec_508.emd system/media/LMprec_508.emd
 cp -a tmp/media/PFFprec_600.emd system/media/PFFprec_600.emd
 cp -a tmp/media/bootanimation.zip system/media/bootanimation.zip
 cp -a tmp/vendor/pittpatt system/vendor/
-cp -a tmp/vendor/lib/egl/libGLES_mali.so ../../../../vendor/samsung/manta/proprietary/libGLES_mali.so
-cp -a tmp/vendor/firmware/es305_fw.bin ../../../../vendor/audience/manta/proprietary/es305_fw.bin
-cp -a tmp/vendor/firmware/bcm2079x_pre_firmware.ncd ../../../../vendor/broadcom/manta/proprietary/bcm2079x_pre_firmware.ncd
-cp -a tmp/vendor/firmware/bcm2079x_firmware.ncd ../../../../vendor/broadcom/manta/proprietary/bcm2079x_firmware.ncd
+#cp -a tmp/vendor/lib/egl/libGLES_mali.so ../../../../vendor/samsung/manta/proprietary/libGLES_mali.so
+#cp -a tmp/vendor/firmware/es305_fw.bin ../../../../vendor/audience/manta/proprietary/es305_fw.bin
+#cp -a tmp/vendor/firmware/bcm2079x_pre_firmware.ncd ../../../../vendor/broadcom/manta/proprietary/bcm2079x_pre_firmware.ncd
+#cp -a tmp/vendor/firmware/bcm2079x_firmware.ncd ../../../../vendor/broadcom/manta/proprietary/bcm2079x_firmware.ncd
 sudo umount tmp
 rm -rf tmp
 rm -rf mantaray-jdq39
