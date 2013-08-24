@@ -1,11 +1,11 @@
 #!/bin/bash
 echo "Download and Deodexing... Please wait."
-wget -nc -q https://dl.google.com/dl/android/aosp/mantaray-jwr66v-factory-888d124e.tgz
-tar zxf mantaray-jwr66v-factory-888d124e.tgz
-cd mantaray-jwr66v
-unzip image-mantaray-jwr66v.zip
+wget -nc -q https://dl.google.com/dl/android/aosp/mantaray-jwr66y-factory-3d8252dd.tgz
+tar zxf mantaray-jwr66y-factory-3d8252dd.tgz
+cd mantaray-jwr66y
+unzip image-mantaray-jwr66y.zip
 cd ../
-./simg2img mantaray-jwr66v/system.img system.ext4.img
+./simg2img mantaray-jwr66y/system.img system.ext4.img
 mkdir system
 mkdir tmp
 sudo mount -o loop -t ext4 system.ext4.img tmp
@@ -79,5 +79,5 @@ cp -a tmp/vendor/firmware/setfile_4e5.bin system/vendor/firmware/setfile_4e5.bin
 cp -a tmp/vendor/firmware/setfile_6a3.bin system/vendor/firmware/setfile_6a3.bin
 sudo umount tmp
 rm -rf tmp
-rm -rf mantaray-jwr66v
+rm -rf mantaray-jwr66y
 rm system.ext4.img
