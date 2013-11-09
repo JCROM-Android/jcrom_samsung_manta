@@ -4,6 +4,9 @@ PRODUCT_PACKAGES += \
     Browser \
     Gallery2
 
+PRODUCT_PACKAGES += \
+    Launcher2
+
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/system/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
 	$(LOCAL_PATH)/proprietary/system/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
