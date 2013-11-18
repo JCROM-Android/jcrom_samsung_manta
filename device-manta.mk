@@ -7,6 +7,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Launcher2
 
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.voice.capable=false
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.sms.capable=false
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.ui.phone=800 \
+    persist.sys.ui.tablet=320
+
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/system/vendor/etc/audio_effects.conf:system/vendor/etc/audio_effects.conf \
 	$(LOCAL_PATH)/proprietary/system/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
