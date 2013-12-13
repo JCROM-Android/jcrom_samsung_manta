@@ -1,11 +1,11 @@
 #!/bin/bash
 echo "Download and Deodexing... Please wait."
-wget -nc -q https://dl.google.com/dl/android/aosp/mantaray-krt16s-factory-94413961.tgz
-tar zxf mantaray-krt16s-factory-94413961.tgz
-cd mantaray-krt16s
-unzip image-mantaray-krt16s.zip
+wget -nc -q https://dl.google.com/dl/android/aosp/mantaray-kot49h-factory-174ba74f.tgz
+tar zxf mantaray-kot49h-factory-174ba74f.tgz
+cd mantaray-kot49h
+unzip image-mantaray-kot49h.zip
 cd ../
-./simg2img mantaray-krt16s/system.img system.ext4.img
+./simg2img mantaray-kot49h/system.img system.ext4.img
 mkdir system
 mkdir tmp
 sudo mount -o loop -t ext4 system.ext4.img tmp
@@ -37,5 +37,5 @@ cp -a tmp/media/bootanimation.zip system/media/bootanimation.zip
 
 sudo umount tmp
 rm -rf tmp
-rm -rf mantaray-krt16s
+rm -rf mantaray-kot49h
 rm system.ext4.img
