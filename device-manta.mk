@@ -1,12 +1,5 @@
 LOCAL_PATH := jcrom/samsung/manta
 
-PRODUCT_PACKAGES += \
-    Browser \
-    Gallery2
-
-PRODUCT_PACKAGES += \
-    Launcher2
-
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.voice.capable=false
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.sms.capable=false
 
