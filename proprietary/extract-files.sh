@@ -1,11 +1,11 @@
 #!/bin/bash
 echo "Download and Deodexing... Please wait."
-wget -nc -q https://dl.google.com/dl/android/aosp/mantaray-kot49h-factory-174ba74f.tgz
-tar zxf mantaray-kot49h-factory-174ba74f.tgz
-cd mantaray-kot49h
-unzip image-mantaray-kot49h.zip
+wget -nc -q https://dl.google.com/dl/android/aosp/mantaray-ktu84l-factory-8fefbb27.tgz
+tar zxf mantaray-ktu84l-factory-8fefbb27.tgz
+cd mantaray-ktu84l
+unzip image-mantaray-ktu84l.zip
 cd ../
-./simg2img mantaray-kot49h/system.img system.ext4.img
+./simg2img mantaray-ktu84l/system.img system.ext4.img
 mkdir system
 mkdir tmp
 sudo mount -o loop -t ext4 system.ext4.img tmp
@@ -33,9 +33,14 @@ cp -a tmp/etc/apns-conf.xml system/etc/apns-conf.xml
 cp -a tmp/etc/audio_effects.conf system/etc/audio_effects.conf
 cp -a tmp/etc/fmas_eq.dat system/etc/fmas_eq.dat
 cp -a tmp/lib/soundfx/libfmas.so system/lib/soundfx/libfmas.so
+cp -a tmp/lib/libgcastv2_base.so system/lib/libgcastv2_base.so
+cp -a tmp/lib/libgcastv2_support.so system/lib/libgcastv2_support.so
+cp -a tmp/lib/libjgcastservice.so system/lib/libjgcastservice.so
+cp -a tmp/lib/libjhead.so system/lib/libjhead.so
+cp -a tmp/lib/libjhead_jni.so system/lib/libjhead_jni.so
 cp -a tmp/media/bootanimation.zip system/media/bootanimation.zip
 
 sudo umount tmp
 rm -rf tmp
-rm -rf mantaray-kot49h
+rm -rf mantaray-ktu84l
 rm system.ext4.img
