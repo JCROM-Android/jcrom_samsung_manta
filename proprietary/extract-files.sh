@@ -1,12 +1,12 @@
 #!/bin/bash
 echo "Please wait."
-wget -nc -q https://dl.google.com/dl/android/aosp/mantaray-lrx21p-factory-ad2499ea.tgz
-tar zxf mantaray-lrx21p-factory-ad2499ea.tgz
-rm mantaray-lrx21p-factory-ad2499ea.tgz
-cd mantaray-lrx21p
-unzip image-mantaray-lrx21p.zip
+wget -nc -q https://dl.google.com/dl/android/aosp/mantaray-lrx22c-factory-1a7ae5d1.tgz
+tar zxf mantaray-lrx22c-factory-1a7ae5d1.tgz
+rm mantaray-lrx22c-factory-1a7ae5d1.tgz
+cd mantaray-lrx22c
+unzip image-mantaray-lrx22c.zip
 cd ../
-./simg2img mantaray-lrx21p/system.img system.ext4.img
+./simg2img mantaray-lrx22c/system.img system.ext4.img
 mkdir system
 mkdir tmp
 sudo mount -o loop -t ext4 system.ext4.img tmp
@@ -51,5 +51,5 @@ cp -a tmp/media/bootanimation.zip system/media/bootanimation.zip
 
 sudo umount tmp
 rm -rf tmp
-rm -rf mantaray-lrx21p
+rm -rf mantaray-lrx22c
 rm system.ext4.img
